@@ -78,6 +78,9 @@ body footer .text .send {
   justify-content: center;
   align-items: center;
 }
+body footer .text .send .btn {
+  border-radius: 100%;
+}
 
 @media screen and (min-width: 600px) {
   body {
