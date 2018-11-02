@@ -3,48 +3,6 @@ body {
   background: #22181C;
   height: 100vh;
 }
-body header {
-  width: 100%;
-  height: 10vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  -webkit-box-shadow: 0px 0.2px 5px 0px white;
-  -moz-box-shadow: 0px 0.2px 5px 0px white;
-  box-shadow: 0px 0.2px 5px 0px white;
-}
-body header .menu {
-  margin-left: 20px;
-}
-body header .tittle h1 {
-  font-size: 40px;
-  margin: 10px 0px;
-}
-body header .online {
-  margin-right: 20px;
-}
-body main {
-  height: 80vh;
-  display: flex;
-  align-content: flex-end;
-}
-body main .chat {
-  display: flex;
-  align-items: flex-end;
-  margin: 0px 10px;
-}
-body main .chat ul li {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-body main .chat ul li .imagen1 {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  margin: 0px 8px;
-}
 body footer {
   width: 100%;
   height: 10vh;
@@ -86,6 +44,49 @@ body footer .text .send .btn {
   body {
     background-color: orange;
   }
+}
+body header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-box-shadow: 0px 0.2px 5px 0px white;
+  -moz-box-shadow: 0px 0.2px 5px 0px white;
+  box-shadow: 0px 0.2px 5px 0px white;
+}
+body header .menu {
+  margin-left: 20px;
+}
+body header .tittle h1 {
+  font-size: 40px;
+  margin: 10px 0px;
+}
+body header .online {
+  margin-right: 20px;
+}
+
+body main {
+  height: 80vh;
+  display: flex;
+  align-content: flex-end;
+}
+body main .chat {
+  display: flex;
+  align-items: flex-end;
+  margin: 0px 10px;
+}
+body main .chat ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body main .chat ul li .imagen1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin: 0px 8px;
 }
 
 /*# sourceMappingURL=styles.css.map */

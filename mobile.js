@@ -12,13 +12,10 @@ input.addEventListener('keypress', function (e) {
 function addMessage() {
   var buzon = document.getElementById('buzon')
   var mensage = document.createElement('li')
-
   // accediendo a lo q escribi
   mensage.innerHTML = input.value
-
   // reseteando el input
   input.value = ''
-
   // mando el mensage
   buzon.appendChild(mensage)
 
