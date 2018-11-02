@@ -1,37 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dissie</title>
-    <link rel="stylesheet" href="styles/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <title>D I S S I E</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
+
 <body>
+  <div class="hide-on-small-only">
     <header class="header">
-        <section class="user-intface">
-            <img src="" alt="User" class="user-img">
-            <div class="user-log">
-            <p class=user-name></p>
-            <button class="log-but">Log out</button>
-            </div>
-        </section>
-            <div>
-               <img src="" alt="Dissie logo" class="Logo">
-            </div>
+      <section class="user-intface">
+        <img src="" alt="User" class="user-img">
+        <div class="user-log">
+          <p class=user-name></p>
+          <button class="log-but">Log out</button>
+        </div>
+      </section>
+      <div>
+        <img src="" alt="Dissie logo" class="Logo">
+      </div>
     </header>
     <main></main>
     <section>
-        <p>Logged Users</p>
+      <p>Logged Users</p>
     </section>
     <section>
 
     </section>
     <Footer>
-        <input type="text" class="input-chat">
-        <Button class="send-buton"></Button>
-        <button class="clr-button"></button>
-        <button class="hide-button"></button>
+      <input type="text" class="input-chat">
+      <Button class="send-buton"></Button>
+      <button class="clr-button"></button>
+      <button class="hide-button"></button>
     </Footer>
+  </div>
+
+  <div>
+    <header>
+      <div class="menu">
+        <i class="small material-icons">menu</i>
+      </div>
+      <div class="tittle">
+        <h1>
+          Dissie
+        </h1>
+      </div>
+      <div class="online">
+        <i class="small material-icons">group</i>
+      </div>
+    </header>
+    <main>
+      <div class="chat">
+        <ul class="messages" id="buzon">
+          <li>
+            <img class="imagen1" src="photos/pilot.png" alt="">
+            <p><strong>Santy</strong><br>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque doloremque.</p>
+          </li>
+          <li>
+            <img class="imagen1" src="photos/pilot.png" alt="">
+            <p><strong>Santy</strong><br>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque doloremque.</p>
+          </li>
+          <li></li>
+        </ul>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="text">
+        <div class="emojis">
+          <a href="">
+            <i class="small material-icons">mood</i>
+          </a>
+        </div>
+        <div class="input">
+          <input type="text">
+        </div>
+        <div class="send">
+          <a href="" id="send-button">
+            <i class="small material-icons">send</i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="mobile.js"></script>
 </body>
+
 </html>
