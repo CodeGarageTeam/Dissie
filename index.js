@@ -13,14 +13,14 @@ firebase.initializeApp(config);
 
 // FirebaseUI config.
 var uiConfig = {
-signInSuccessUrl: '<url-to-redirect-to-on-success>',
-signInOptions: [
-  firebase.auth.GoogleAuthProvider.PROVIDER_ID
-],
-// Terms of service url/callback.
-tosUrl: () => {},
-// Privacy policy url/callback.
-privacyPolicyUrl: () => {}
+  signInSuccessUrl: '<url-to-redirect-to-on-success>',
+  signInOptions: [
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID
+  ],
+  // Terms of service url/callback.
+  tosUrl: () => {},
+  // Privacy policy url/callback.
+  privacyPolicyUrl: () => {}
 };
 
 // Initialize the FirebaseUI Widget using Firebase.
@@ -30,26 +30,25 @@ ui.start('#firebaseui-auth-container', uiConfig);
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
   if (user) {
-      user = firebaseUser
-      // User is signed in.
-      // var displayName = user.displayName
-      // var email = user.email
-      // var photoURL = user.photoURL
-      // document.getElementById('sign-in-status').textContent = 'Signed in'
-      // document.getElementById('sign-in').textContent = 'Sign out'
-      // document.getElementById('account-details').textContent = JSON.stringify({
-      //     displayName: displayName,
-      //     email: email,
-      //     photoURL: photoURL,
-      // })
+    user = firebaseUser
+    // User is signed in.
+    // var displayName = user.displayName
+    // var email = user.email
+    // var photoURL = user.photoURL
+    // document.getElementById('sign-in-status').textContent = 'Signed in'
+    // document.getElementById('sign-in').textContent = 'Sign out'
+    // document.getElementById('account-details').textContent = JSON.stringify({
+    //     displayName: displayName,
+    //     email: email,
+    //     photoURL: photoURL,
+    // })
   } else {
-      // User is signed out.
-      document.getElementById('sign-in-status').textContent = 'Signed out'
-      document.getElementById('sign-in').textContent = 'Sign in'
-      document.getElementById('account-details').textContent = 'null'
+    // User is signed out.
+    document.getElementById('sign-in-status').textContent = 'Signed out'
+    document.getElementById('sign-in').textContent = 'Sign in'
+    document.getElementById('account-details').textContent = 'null'
   }
-}, error => console.log(error)
-)
+}, error => console.log(error))
 
 // final of firebase configuration ----
 
