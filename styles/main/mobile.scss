@@ -1,17 +1,21 @@
 body main {
+  width: 100%;
   height: 80vh;
   display: flex;
   align-content: flex-end;
 
-  .chat {
+  ul {
     display: flex;
-    align-items: flex-end;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
     margin: 0px 10px;
 
-    ul li {
+    li {
       display: flex;
       flex-direction: row;
       align-items: center;
+      min-height: 70px;
 
       .imagen1 {
         width: 50px;
