@@ -16,39 +16,12 @@
 </head>
 
 <body>
-  <div class="hide-on-small-only">
-    <header class="header">
-      <section class="user-intface">
-        <img src="" alt="User" class="user-img">
-        <div class="user-log">
-          <p class=user-name></p>
-          <button class="log-but">Log out</button>
-        </div>
-      </section>
-      <div>
-        <img src="" alt="Dissie logo" class="Logo">
-      </div>
-    </header>
-    <main></main>
-    <section>
-      <p>Logged Users</p>
-    </section>
-    <section>
-
-    </section>
-    <Footer>
-      <input type="text" class="input-chat">
-      <Button class="send-buton"></Button>
-      <button class="clr-button"></button>
-      <button class="hide-button"></button>
-    </Footer>
-  </div>
-
   <div>
     <header>
       <div class="menu">
         <i class="material-icons">menu</i>
       </div>
+      <button class="btn waves-effect waves-light" id="logout-button">Logout</button>
       <div class="tittle">
         <h1>
           Dissie
@@ -58,15 +31,11 @@
         <i class="small material-icons">group</i>
       </div>
     </header>
-    <div id="firebaseui-auth-container">Google</div>
-    <div id="sign-in-status"></div>
-    <div id="sign-in"></div>
-    <div id="account-details"></div>
     <main>
-      <ul class="messages" id="buzon">
-      </ul>
+      <div id="firebaseui-auth-container"></div>
+      <ul class="messages" id="buzon"></ul>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="text">
         <div class="emojis">
           <a href="">
@@ -84,7 +53,33 @@
       </div>
     </footer>
   </div>
-  <script src="jquery.min.js"></script>
+  <div class="hide-on-small-only">
+        <header class="header">
+          <section class="user-intface">
+            <img src="" alt="User" class="user-img">
+            <div class="user-log">
+              <p class=user-name></p>
+              <button class="log-but">Log out</button>
+            </div>
+          </section>
+          <div>
+            <img src="" alt="Dissie logo" class="Logo">
+          </div>
+        </header>
+        <main></main>
+        <section>
+          <p>Logged Users</p>
+        </section>
+        <section>
+    
+        </section>
+        <Footer>
+          <input type="text" class="input-chat">
+          <Button class="send-buton"></Button>
+          <button class="clr-button"></button>
+          <button class="hide-button"></button>
+        </Footer>
+      </div>
   <script src="index.js"></script>
 </body>
 

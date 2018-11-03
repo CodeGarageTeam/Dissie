@@ -13,7 +13,7 @@ firebase.initializeApp(config);
 
 // FirebaseUI config.
 var uiConfig = {
-  signInSuccessUrl: '<url-to-redirect-to-on-success>',
+  signInSuccessUrl: () => false,
   signInOptions: [
     firebase.auth.GoogleAuthProvider.PROVIDER_ID
   ],
@@ -29,26 +29,22 @@ var ui = new firebaseui.auth.AuthUI(firebase.auth());
 ui.start('#firebaseui-auth-container', uiConfig);
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
-  if (user) {
+  if (firebaseUser) {
     user = firebaseUser
-    // User is signed in.
-    // var displayName = user.displayName
-    // var email = user.email
-    // var photoURL = user.photoURL
-    // document.getElementById('sign-in-status').textContent = 'Signed in'
-    // document.getElementById('sign-in').textContent = 'Sign out'
-    // document.getElementById('account-details').textContent = JSON.stringify({
-    //     displayName: displayName,
-    //     email: email,
-    //     photoURL: photoURL,
-    // })
+    document.getElementById('firebaseui-auth-container').style.display = 'none'
+    document.getElementById('logout-button').style.display = 'block'
+    document.getElementById('buzon').style.display = 'block'
+    document.getElementById('footer').style.display = 'block'
   } else {
     // User is signed out.
-    document.getElementById('sign-in-status').textContent = 'Signed out'
-    document.getElementById('sign-in').textContent = 'Sign in'
-    document.getElementById('account-details').textContent = 'null'
+    document.getElementById('firebaseui-auth-container').style.display = 'block'
+    document.getElementById('logout-button').style.display = 'none'
+    document.getElementById('buzon').style.display = 'none'
+    document.getElementById('footer').style.display = 'none'
   }
 }, error => console.log(error))
+
+document.getElementById('logout-button').addEventListener('click', () => firebase.auth().signOut())
 
 // final of firebase configuration ----
 
