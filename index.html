@@ -2,15 +2,17 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <title>D I S S I E</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>D I S S I E</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/3.4.1/firebase-ui-auth__es_419.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/3.4.1/firebase-ui-auth.css" />
 </head>
 
 <body>
@@ -56,16 +58,13 @@
         <i class="small material-icons">group</i>
       </div>
     </header>
+    <div id="firebaseui-auth-container">Google</div>
+    <div id="sign-in-status"></div>
+    <div id="sign-in"></div>
+    <div id="account-details"></div>
     <main>
       <div class="chat">
         <ul class="messages" id="buzon">
-          <li>
-            <img class="imagen1" src="photos/pilot.png" alt="">
-            <div>
-              <strong>Santy</strong>
-              <p>Lo rem, ipsum dolor sit amet consectetur adipisicing elit. Eaque doloremque.</p>
-            </div>
-          </li>
         </ul>
       </div>
     </main>
@@ -89,5 +88,4 @@
   </div>
   <script src="index.js"></script>
 </body>
-
 </html>
