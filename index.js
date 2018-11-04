@@ -4,13 +4,15 @@ var user = {}
 firebase.initializeApp({
   apiKey: "AIzaSyCxXq7SDRwsgYAuY1QP7LmBWj_ViLf_u_U",
   authDomain: "dissie-app.firebaseapp.com",
-  databaseURL: "https://dissie-app.firebaseio.com",
+  databaseURL: 'https://dissie-app.firebaseio.com',
   projectId: "dissie-app",
   storageBucket: "dissie-app.appspot.com",
   messagingSenderId: "321471252260"
 })
 var db = firebase.firestore()
-db.settings({timestampsInSnapshots: true})
+db.settings({
+  timestampsInSnapshots: true
+})
 
 // FirebaseUI config.
 var uiConfig = {
@@ -51,9 +53,9 @@ document.getElementById('logout-button').addEventListener('click', () => firebas
 
 // final of firebase configuration ----
 
-db.collection("chat").orderBy("timeStamp", "desc").onSnapshot(chats => {
+db.collection('chat').orderBy('timeStamp', 'desc').onSnapshot(chats => {
   var buzon = document.getElementById('buzon')
-  while (buzon.hasChildNodes()) {   
+  while (buzon.hasChildNodes()) {
     buzon.removeChild(buzon.firstChild);
   }
   chats.forEach(response => {
@@ -65,14 +67,14 @@ db.collection("chat").orderBy("timeStamp", "desc").onSnapshot(chats => {
     var container = document.createElement('div')
     var name = document.createElement('strong')
     var text = document.createElement('p')
-  
+
     img.className = 'imagen1'
     img.src = chat.photo
     name.innerHTML = chat.name
     text.innerHTML = chat.message
     container.appendChild(name)
     container.appendChild(text)
-  
+
     // reseteando el input
     input.value = ''
     // mando el mensage
@@ -82,11 +84,14 @@ db.collection("chat").orderBy("timeStamp", "desc").onSnapshot(chats => {
   })
 })
 
-
 var button = document.getElementById('send-button')
 var input = document.getElementById('new-message-input')
 
-button.addEventListener('click', addMessage)
+button.addEventListener('click', function (e) {
+  if (input.value != '') {
+    addMessage()
+  }
+})
 input.addEventListener('keypress', function (e) {
   if (e.keyCode === 13 && input.value != '') {
     addMessage()
@@ -97,14 +102,18 @@ input.addEventListener('keypress', function (e) {
 function addMessage() {
   // send chat to firebase
   db.collection("chat").add({
-    name: user.displayName,
-    photo: user.photoURL,
-    message: input.value,
-    timeStamp: new Date()
-  })
-  .then(docRef => console.log("Document written with ID: ", docRef.id))
-  .catch(error => console.error("Error adding document: ", error))
-  
+      name: user.displayName,
+      photo: user.photoURL,
+      message: input.value,
+      timeStamp: new Date()
+    })
+    .then(docRef => console.log('Document written with ID: ', docRef.id))
+    .catch(error => console.error('Error adding document: ', error))
+
   // reseteando el input
   input.value = ''
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  M.AutoInit()
+})
