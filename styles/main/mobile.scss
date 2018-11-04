@@ -18,14 +18,37 @@ body main {
     li {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start;
+      padding: 15px 40px;
       min-height: 70px;
 
+      .chat-column-container {
+        padding-top: 0px;
+      }
       .imagen1 {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         border-radius: 100%;
         margin: 0px 8px;
+      }
+      .chat-date {
+        color: hsla(0, 0%, 100%, .2);
+        font-size: 0.7rem;
+        padding-left: 10px;
+        margin: 0;
+        align-self: flex-end;
+      }
+      .chat-text {
+        color: #dcddde;
+        font-size: 0.9375rem;
+        font-weight: 400;
+        padding-top: 4px;
+        margin: 0;
+      }
+      .chat-title {
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 500;
       }
     }
   }

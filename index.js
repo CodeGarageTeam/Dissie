@@ -58,19 +58,37 @@ db.collection("chat").orderBy("timeStamp", "desc").onSnapshot(chats => {
   }
   chats.forEach(response => {
     var chat = response.data()
-    console.log(chat)
 
     var mensage = document.createElement('li')
     var img = document.createElement('img')
     var container = document.createElement('div')
+    var rowTitle = document.createElement('div')
     var name = document.createElement('strong')
     var text = document.createElement('p')
+    var date = document.createElement('p')
   
     img.className = 'imagen1'
-    img.src = chat.photo
+    date.className = 'chat-date'
+    text.className = 'chat-text'
+    name.className = 'chat-title'
+    rowTitle.className = 'row'
+    container.className = 'chat-column-container'
+
+    const chatDate = chat.timeStamp.toDate()
+    const y = chatDate.getFullYear()
+    const m = chatDate.getMonth()
+    const d = chatDate.getDate()
+    const h = chatDate.getHours()
+    const min = chatDate.getMinutes()
+
+    date.innerHTML = `${d}/${m}/${y} ${h}:${min}`
     name.innerHTML = chat.name
     text.innerHTML = chat.message
-    container.appendChild(name)
+    img.src = chat.photo
+
+    rowTitle.appendChild(name)
+    rowTitle.appendChild(date)
+    container.appendChild(rowTitle)
     container.appendChild(text)
   
     // reseteando el input
