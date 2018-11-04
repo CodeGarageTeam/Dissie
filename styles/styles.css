@@ -1,6 +1,6 @@
 body {
   color: #fff;
-  background: #aa3e69;
+  background: #22181C;
   height: 100vh;
 }
 
@@ -93,6 +93,7 @@ body main .messages li {
           align-items: flex-start;
   padding: 15px 40px;
   min-height: 70px;
+  margin: 5px 5px 0px 5px;
 }
 
 body main .messages li .chat-column-container {
