@@ -30,6 +30,7 @@ ui.start('#firebaseui-auth-container', uiConfig)
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
   document.getElementById('mainchat-loader').classList.remove('active')
+  document.getElementById('mainchat-loader').classList.add('hide')
 
   if (firebaseUser) {
     user = firebaseUser
