@@ -29,18 +29,20 @@ var ui = new firebaseui.auth.AuthUI(firebase.auth());
 ui.start('#firebaseui-auth-container', uiConfig);
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
+  document.getElementById('mainchat-loader').classList.remove('active')
+  
   if (firebaseUser) {
     user = firebaseUser
-    document.getElementById('firebaseui-auth-container').style.display = 'none'
-    document.getElementById('logout-button').style.display = 'block'
-    document.getElementById('buzon').style.display = 'block'
-    document.getElementById('footer').style.display = 'block'
+    document.getElementById('firebaseui-auth-container').classList.add('hide')
+    document.getElementById('logout-button').classList.remove('hide')
+    document.getElementById('buzon').classList.remove('hide')
+    document.getElementById('footer').classList.remove('hide')
   } else {
     // User is signed out.
-    document.getElementById('firebaseui-auth-container').style.display = 'block'
-    document.getElementById('logout-button').style.display = 'none'
-    document.getElementById('buzon').style.display = 'none'
-    document.getElementById('footer').style.display = 'none'
+    document.getElementById('firebaseui-auth-container').classList.remove('hide')
+    document.getElementById('logout-button').classList.add('hide')
+    document.getElementById('buzon').classList.add('hide')
+    document.getElementById('footer').classList.add('hide')
   }
 }, error => console.log(error))
 
@@ -70,7 +72,7 @@ function addMessage() {
 
   img.className = 'imagen1'
   img.src = user.photoURL
-  name.innerHTML = user.displayName
+  name.innerHTML = user.displayName + 'probando'
   text.innerHTML = input.value
   container.appendChild(name)
   container.appendChild(text)
@@ -81,4 +83,6 @@ function addMessage() {
   mensage.appendChild(img)
   mensage.appendChild(container)
   buzon.appendChild(mensage)
+
+  $('#buzon').animate({scrollTop: $('#buzon').prop("scrollHeight")}, 500)
 }

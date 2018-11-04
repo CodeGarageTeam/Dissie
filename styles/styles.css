@@ -6,42 +6,30 @@ body {
 
 @media screen and (min-width: 600px) {
   body {
-    background-color: orange;
+    background-color: green;
   }
 }
-
 body header {
   width: 100%;
   height: 10vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   z-index: 2;
   -webkit-box-shadow: 0px 0.2px 5px 0px white;
+  -moz-box-shadow: 0px 0.2px 5px 0px white;
   box-shadow: 0px 0.2px 5px 0px white;
   background: #22181C;
 }
-
 body header .menu {
   margin-left: 20px;
 }
-
 body header .tittle h1 {
   font-size: 40px;
   margin: 10px 0px;
 }
-
 body header .online {
   margin-right: 20px;
 }
@@ -49,128 +37,77 @@ body header .online {
 body main {
   width: 100%;
   height: 80vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 body main ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: flex-start;
+  flex-direction: column;
   margin: 0px;
   width: 100%;
   height: 100%;
   overflow-y: scroll;
 }
-
 body main ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
   min-height: 70px;
 }
-
 body main ul li .imagen1 {
   width: 50px;
   height: 50px;
   border-radius: 100%;
   margin: 0px 8px;
 }
-
 body main .firebaseui-idp-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 body footer {
   width: 100%;
   height: 10vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-content: center;
+  align-items: center;
   position: relative;
   -webkit-box-shadow: 0px 0.2px 5px 0px white;
+  -moz-box-shadow: 0px 0.2px 5px 0px white;
   box-shadow: 0px 0.2px 5px 0px white;
 }
-
 body footer .text {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-
 body footer .text .emojis {
   width: 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 body footer .text .input {
   width: 70%;
 }
-
 body footer .text .input input {
   color: #fff;
 }
-
 body footer .text .send {
   width: 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 body footer .text .send .btn {
   border-radius: 100%;
 }
+
+.hide {
+  display: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
