@@ -1,19 +1,19 @@
 var user = {}
 
 // Initialize Firebase
-var config = {
+firebase.initializeApp({
   apiKey: "AIzaSyCxXq7SDRwsgYAuY1QP7LmBWj_ViLf_u_U",
   authDomain: "dissie-app.firebaseapp.com",
   databaseURL: "https://dissie-app.firebaseio.com",
   projectId: "dissie-app",
   storageBucket: "dissie-app.appspot.com",
   messagingSenderId: "321471252260"
-}
-firebase.initializeApp(config)
+})
+var db = firebase.firestore()
+db.settings({timestampsInSnapshots: true})
 
 // FirebaseUI config.
 var uiConfig = {
-  signInSuccessUrl: () => false,
   signInOptions: [
     firebase.auth.GoogleAuthProvider.PROVIDER_ID
   ],
@@ -51,6 +51,38 @@ document.getElementById('logout-button').addEventListener('click', () => firebas
 
 // final of firebase configuration ----
 
+db.collection("chat").orderBy("timeStamp", "desc").onSnapshot(chats => {
+  var buzon = document.getElementById('buzon')
+  while (buzon.hasChildNodes()) {   
+    buzon.removeChild(buzon.firstChild);
+  }
+  chats.forEach(response => {
+    var chat = response.data()
+    console.log(chat)
+
+    var mensage = document.createElement('li')
+    var img = document.createElement('img')
+    var container = document.createElement('div')
+    var name = document.createElement('strong')
+    var text = document.createElement('p')
+  
+    img.className = 'imagen1'
+    img.src = chat.photo
+    name.innerHTML = chat.name
+    text.innerHTML = chat.message
+    container.appendChild(name)
+    container.appendChild(text)
+  
+    // reseteando el input
+    input.value = ''
+    // mando el mensage
+    mensage.appendChild(img)
+    mensage.appendChild(container)
+    buzon.appendChild(mensage)
+  })
+})
+
+
 var button = document.getElementById('send-button')
 var input = document.getElementById('new-message-input')
 
@@ -63,28 +95,16 @@ input.addEventListener('keypress', function (e) {
 
 // crear nuevo mensage
 function addMessage() {
-  var buzon = document.getElementById('buzon')
-  var mensage = document.createElement('li')
-  var img = document.createElement('img')
-  var container = document.createElement('div')
-  var name = document.createElement('strong')
-  var text = document.createElement('p')
-
-  img.className = 'imagen1'
-  img.src = user.photoURL
-  name.innerHTML = user.displayName + 'probando'
-  text.innerHTML = input.value
-  container.appendChild(name)
-  container.appendChild(text)
-
+  // send chat to firebase
+  db.collection("chat").add({
+    name: user.displayName,
+    photo: user.photoURL,
+    message: input.value,
+    timeStamp: new Date()
+  })
+  .then(docRef => console.log("Document written with ID: ", docRef.id))
+  .catch(error => console.error("Error adding document: ", error))
+  
   // reseteando el input
   input.value = ''
-  // mando el mensage
-  mensage.appendChild(img)
-  mensage.appendChild(container)
-  buzon.appendChild(mensage)
-
-  $('#buzon').animate({
-    scrollTop: $('#buzon').prop("scrollHeight")
-  }, 500)
 }
