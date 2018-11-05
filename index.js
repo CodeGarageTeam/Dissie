@@ -76,6 +76,10 @@ db.collection('chat').orderBy('timeStamp', 'desc').onSnapshot(chats => {
     rowTitle.className = 'row'
     container.className = 'chat-column-container'
 
+    if (user.displayName == chat.name) {
+      mensage.classList.add('alignEnd')
+    }
+
     const chatDate = chat.timeStamp.toDate()
     const y = chatDate.getFullYear()
     const m = chatDate.getMonth()
