@@ -9,80 +9,50 @@ body {
     background: #36393F;
   }
 }
-
-body header {
-  width: 100%;
-  height: 10vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
+body div header nav {
+  background: #36393F;
+}
+body div header nav .container {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-  -webkit-box-shadow: 0px 0.2px 5px 0px white;
-  box-shadow: 0px 0.2px 5px 0px white;
-  background: #22181C;
+  justify-content: center;
+}
+body div header nav .container .sidenav-trigger {
+  position: absolute;
+  left: 0px;
+}
+body div header nav .container .sidenav-trigger2 {
+  position: absolute;
+  right: 0px;
+}
+body div header nav .container ul li {
+  font-family: "Bungee Inline", cursive;
+  font-size: 30px;
 }
 
-body header .menu {
-  margin-left: 20px;
-}
-
-body header .tittle h1 {
-  font-size: 40px;
-  margin: 10px 0px;
-}
-
-body header .online {
-  margin-right: 20px;
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 body main {
   width: 100%;
-  height: 80vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+  flex: 1;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
-
 body main .messages {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
   margin: 0px;
   width: 100%;
   height: 100%;
   overflow-y: scroll;
 }
-
 body main .messages li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -90,18 +60,15 @@ body main .messages li {
   min-height: 70px;
   margin: 5px 5px 0px 5px;
 }
-
 body main .messages li .chat-column-container {
   padding-top: 0px;
 }
-
 body main .messages li .imagen1 {
   width: 40px;
   height: 40px;
   border-radius: 100%;
   margin: 0px 8px;
 }
-
 body main .messages li .chat-date {
   color: rgba(255, 255, 255, 0.2);
   font-size: 0.7rem;
@@ -109,7 +76,6 @@ body main .messages li .chat-date {
   margin: 0;
   align-self: flex-end;
 }
-
 body main .messages li .chat-text {
   color: #dcddde;
   font-size: 0.9375rem;
@@ -117,13 +83,11 @@ body main .messages li .chat-text {
   padding-top: 4px;
   margin: 0;
 }
-
 body main .messages li .chat-title {
   color: #fff;
   font-size: 1rem;
   font-weight: 500;
 }
-
 body main .firebaseui-idp-list {
   display: flex;
   justify-content: center;
@@ -136,43 +100,26 @@ body main .firebaseui-idp-list {
   flex-direction: row;
   background-color: rgba(114, 118, 125, 0.3);
   border-radius: 8px;
-  margin: 0px 3%;
+  margin: 0px 3% 20px 3%;
 }
-
 .text-input-container .emojis {
   width: 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
-
 .text-input-container .input {
   width: 70%;
 }
-
 .text-input-container .input input {
   color: #fff;
 }
-
 .text-input-container .send {
   width: 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
-
 .text-input-container .send .btn {
   border-radius: 100%;
 }
