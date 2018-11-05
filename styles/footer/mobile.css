@@ -1,21 +1,5 @@
-body footer {
-  width: 100%;
-  height: 10vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-  -webkit-box-shadow: 0px 0.2px 5px 0px white;
-  box-shadow: 0px 0.2px 5px 0px white;
-}
-
-body footer .text {
-  width: 100%;
+.text-input-container {
+  width: 94%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,9 +7,12 @@ body footer .text {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  background-color: rgba(114, 118, 125, 0.3);
+  border-radius: 8px;
+  margin: 0px 3%;
 }
 
-body footer .text .emojis {
+.text-input-container .emojis {
   width: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -38,15 +25,15 @@ body footer .text .emojis {
           align-items: center;
 }
 
-body footer .text .input {
+.text-input-container .input {
   width: 70%;
 }
 
-body footer .text .input input {
+.text-input-container .input input {
   color: #fff;
 }
 
-body footer .text .send {
+.text-input-container .send {
   width: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,6 +46,6 @@ body footer .text .send {
           align-items: center;
 }
 
-body footer .text .send .btn {
+.text-input-container .send .btn {
   border-radius: 100%;
 }
