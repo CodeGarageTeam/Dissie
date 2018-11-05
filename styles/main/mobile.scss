@@ -21,6 +21,17 @@ body main {
     height: 100%;
     overflow-y: scroll;
 
+    .alignEnd {
+      align-self: flex-end;
+      flex-direction: row-reverse;
+      .row {
+        flex-direction: row-reverse;
+      }
+      .chat-text {
+        text-align: end;
+      }
+    }
+
     li {
       display: flex;
       flex-direction: row;
@@ -43,7 +54,7 @@ body main {
       .chat-date {
         color: hsla(0, 0%, 100%, .2);
         font-size: 0.7rem;
-        padding-left: 10px;
+        padding: 0px 10px;
         margin: 0;
         align-self: flex-end;
       }

@@ -52,6 +52,16 @@ body main .messages {
   height: 100%;
   overflow-y: scroll;
 }
+body main .messages .alignEnd {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+body main .messages .alignEnd .row {
+  flex-direction: row-reverse;
+}
+body main .messages .alignEnd .chat-text {
+  text-align: end;
+}
 body main .messages li {
   display: flex;
   flex-direction: row;
@@ -72,7 +82,7 @@ body main .messages li .imagen1 {
 body main .messages li .chat-date {
   color: rgba(255, 255, 255, 0.2);
   font-size: 0.7rem;
-  padding-left: 10px;
+  padding: 0px 10px;
   margin: 0;
   align-self: flex-end;
 }
